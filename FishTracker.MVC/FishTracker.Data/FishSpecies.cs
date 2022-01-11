@@ -10,7 +10,7 @@ namespace FishTracker.Data
     {
         public enum SpeciesName
         { 
-            LargemouthBass, 
+            LargemouthBass = 1, 
             SmallmouthBass, 
             Pike,
             Bluegill, 
