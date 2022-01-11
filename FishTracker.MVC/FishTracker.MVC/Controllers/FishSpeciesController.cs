@@ -16,7 +16,7 @@ namespace FishTracker.MVC.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            List<FishSpecies> orderedList = _db.Species.OrderBy(spec => spec.Species).ToList();
+            List<FishSpecies> orderedList = _db.Species.OrderBy(spec => spec.Name).ToList();
             return View(orderedList);
         }
         // GET: Product

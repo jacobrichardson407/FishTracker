@@ -14,7 +14,7 @@ namespace FishTracker.Data
         [Key]
         public int CatchId { get; set; }
         [Required]
-        [ForeignKey("FishSpecies")]
+        [ForeignKey(nameof(FishSpecies))]
         public int SpeciesId { get; set; }
         public virtual FishSpecies Species { get; set; }
         [Required]
