@@ -1,0 +1,15 @@
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\FishTracker.Services.dll.config
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\FishTracker.Services.dll
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\FishTracker.Services.pdb
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\EntityFramework.dll
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\EntityFramework.xml
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\obj\Debug\FishTracker.Services.csproj.CoreCompileInputs.cache
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\obj\Debug\FishTracker.Services.csproj.CopyComplete
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\obj\Debug\FishTracker.Services.dll
+C:\Users\desig\source\repos\FishTracker.MVC\FishTracker.Services\obj\Debug\FishTracker.Services.pdb
