@@ -54,11 +54,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatchService.cs" />
+    <Compile Include="LureService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FishTracker.Data\FishTracker.Data.csproj">
+      <Project>{7cd26cb0-a870-4642-883c-c1a58fb6e163}</Project>
+      <Name>FishTracker.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FishTracker.Models\FishTracker.Models.csproj">
+      <Project>{817e34dc-51cd-457d-b722-e83a7fcd47d2}</Project>
+      <Name>FishTracker.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

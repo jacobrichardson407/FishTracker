@@ -25,6 +25,8 @@ C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTr
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.AssemblyReference.cache
+C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.Migrations.InitialMigration.resources
+C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.GenerateResource.cache
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.CoreCompileInputs.cache
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.CopyComplete
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.dll

@@ -1,5 +1,8 @@
 ﻿using FishTracker.Data;
+using FishTracker.Models.Lure;
 using FishTracker.MVC.Data;
+using FishTracker.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,99 +16,121 @@ namespace FishTracker.MVC.Controllers
     public class LureController : Controller
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
-        // GET: Product
+        // GET: Catch
         public ActionResult Index()
         {
-            List<Lure> orderedList = _db.Lures.OrderBy(lu => lu.Brand).ToList();
-            return View(orderedList);
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new LureService(userId);
+            var model = service.GetLures();
+
+            return View(model);
         }
-        // GET: Product
+        // GET: Catch
         public ActionResult Create()
         {
             return View();
         }
-        // POST: Product
+        // POST: Catch
         [HttpPost]
-        public ActionResult Create(Lure lure)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(LureCreate lure)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.Lures.Add(lure);
-                _db.SaveChanges();
+                return View(lure);
+            }
+
+            var service = CreateLureService();
+
+            if (service.CreateLure(lure))
+            {
+                TempData["SaveResult"] = "Your lure was saved.";
                 return RedirectToAction("Index");
             }
+
+            ModelState.AddModelError("", "Your lure could not be saved.");
+
             return View(lure);
         }
-        // GET: Delete
-        // Product/Delete/{id}
-        public ActionResult Delete(int? id)
+
+        private LureService CreateLureService()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
-            }
-            Lure lure = _db.Lures.Find(id);
-            if (lure == null)
-            {
-                return HttpNotFound();
-            }
-            return View(lure);
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new LureService(userId);
+            return service;
         }
-        // POST: Delete
-        // Product/Delete/{id}
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+
+        // GET: Delete
+        // Catch/Delete/{id}
         public ActionResult Delete(int id)
         {
-            Lure lure = _db.Lures.Find(id);
-            _db.Lures.Remove(lure);
-            _db.SaveChanges();
+            var svc = CreateLureService();
+            var model = svc.GetLureById(id);
+
+            return View(model);
+        }
+        // POST: Delete
+        // Catch/Delete/{id}
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateLureService();
+
+            service.DeleteLure(id);
+
+            TempData["SaveResult"] = "Your lure was deleted.";
+
             return RedirectToAction("Index");
         }
         // GET: Edit
-        // Product/Edit/{id}
-        public ActionResult Edit(int? id)
+        // Catch/Edit/{id}
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
-            }
-            Lure lure = _db.Lures.Find(id);
-            if (lure == null)
-            {
-                return HttpNotFound();
-            }
-            return View(lure);
+            var service = CreateLureService();
+            var detail = service.GetLureById(id);
+            var model =
+                new LureEdit()
+                {
+                    LureId = detail.LureId,
+                    Brand = detail.Brand,
+                    Name = detail.Name,
+                    Color = detail.Color,
+                    TypeOfLure = detail.TypeOfLure
+                };
+            return View(model);
         }
-        // POST: Edit
-        // Product/Edit/{id}
-        [HttpPost, ActionName("Edit")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Lure lure)
+        public ActionResult Edit(int id, LureEdit model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.Entry(lure).State = EntityState.Modified;
-                _db.SaveChanges();
+                return View(model);
+            }
+            if (model.LureId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+            var service = CreateLureService();
+
+            if (service.UpdateLure(model))
+            {
+                TempData["SaveResult"] = "Your lure has been updated.";
                 return RedirectToAction("Index");
             }
-            return View(lure);
+            ModelState.AddModelError("", "Your lure could not be updated.");
+            return View(model);
         }
         // GET: Details
-        // Product/Details/{id}
-        public ActionResult Details(int? id)
+        // Catch/Details/{id}
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Lure lure = _db.Lures.Find(id);
+            var svc = CreateLureService();
+            var model = svc.GetLureById(id);
 
-            if (lure == null)
-            {
-                return HttpNotFound();
-            }
-            return View(lure);
+            return View(model);
         }
     }
 }

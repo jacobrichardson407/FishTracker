@@ -46,6 +46,7 @@ namespace FishTracker.MVC.Data
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
         }
+
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
     {
@@ -58,7 +59,7 @@ namespace FishTracker.MVC.Data
     {
         public IdentityUserRoleConfiguration()
         {
-            HasKey(iul => iul.UserId);
+            HasKey(iur => iur.UserId);
         }
     }
 }

@@ -237,10 +237,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Catch\Index.cshtml" />
+    <Content Include="Views\Catch\Create.cshtml" />
+    <Content Include="Views\Catch\Details.cshtml" />
+    <Content Include="Views\Catch\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Catch\" />
     <Folder Include="Views\FishSpecies\" />
     <Folder Include="Views\Lure\" />
   </ItemGroup>

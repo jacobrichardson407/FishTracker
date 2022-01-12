@@ -54,16 +54,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatchModels\CatchCreate.cs" />
+    <Compile Include="CatchModels\CatchDetail.cs" />
+    <Compile Include="CatchModels\CatchEdit.cs" />
+    <Compile Include="CatchModels\CatchListItem.cs" />
+    <Compile Include="LureModels\LureCreate.cs" />
+    <Compile Include="LureModels\LureDetail.cs" />
+    <Compile Include="LureModels\LureEdit.cs" />
+    <Compile Include="LureModels\LureListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpeciesModels\SpeciesCreate.cs" />
+    <Compile Include="SpeciesModels\SpeciesDetail.cs" />
+    <Compile Include="SpeciesModels\SpeciesEdit.cs" />
+    <Compile Include="SpeciesModels\SpeciesListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Catch\" />
-    <Folder Include="Lure\" />
-    <Folder Include="Species\" />
+    <ProjectReference Include="..\FishTracker.Data\FishTracker.Data.csproj">
+      <Project>{7CD26CB0-A870-4642-883C-C1A58FB6E163}</Project>
+      <Name>FishTracker.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
