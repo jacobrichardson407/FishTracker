@@ -23,10 +23,9 @@ namespace FishTracker.Data
         public double Weight { get; set; }
         [Required]
         public DateTime CatchDate { get; set; }
-        [Required]
-        [ForeignKey("Lure")]
-        public int LureId { get; set; }
-        public LureType TypeOfLure { get; set; }
+        public virtual List<LureType> TypeOfLure { get; set; }
+        public virtual List<Lure> LureBrand { get; set; }
+        public virtual List<Lure> LureName { get; set; }
         public string Location { get; set; }
         [Required]
         [Display(Name = "Weather Type")]

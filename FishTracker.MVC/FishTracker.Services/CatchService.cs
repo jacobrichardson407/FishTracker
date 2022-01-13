@@ -27,6 +27,8 @@ namespace FishTracker.Services
                     Weight = model.Weight,
                     CatchDate = model.CatchDate,
                     TypeOfLure = model.TypeOfLure,
+                    LureBrand = model.LureBrand,
+                    LureName = model.LureName,
                     Location = model.Location,
                     WeatherType = model.WeatherType,
                     Temperature = model.Temperature
@@ -52,6 +54,8 @@ namespace FishTracker.Services
                             CatchId = e.CatchId,
                             Name = e.FishSpecies,
                             TypeOfLure = e.TypeOfLure,
+                            LureBrand = e.LureBrand,
+                            LureName = e.LureName,
                             Length = e.Length,
                             Weight = e.Weight,
                             CatchDate = e.CatchDate,
@@ -80,6 +84,8 @@ namespace FishTracker.Services
                         Weight = entity.Weight,
                         CatchDate = entity.CatchDate,
                         TypeOfLure = entity.TypeOfLure,
+                        LureBrand = entity.LureBrand,
+                        LureName = entity.LureName,
                         Location = entity.Location,
                         WeatherType = entity.WeatherType,
                         Temperature = entity.Temperature
@@ -100,6 +106,8 @@ namespace FishTracker.Services
                 entity.Weight = model.Weight;
                 entity.CatchDate = model.CatchDate;
                 entity.TypeOfLure = model.TypeOfLure;
+                entity.LureBrand = model.LureBrand;
+                entity.LureName = model.LureName;
                 entity.Location = model.Location;
                 entity.WeatherType = model.WeatherType;
                 entity.Temperature = model.Temperature;

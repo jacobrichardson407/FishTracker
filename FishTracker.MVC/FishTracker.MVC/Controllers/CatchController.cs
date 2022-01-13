@@ -99,6 +99,8 @@ namespace FishTracker.MVC.Controllers
                     Weight = detail.Weight,
                     CatchDate = detail.CatchDate,
                     TypeOfLure = detail.TypeOfLure,
+                    LureBrand = detail.LureBrand,
+                    LureName = detail.LureName,
                     Location = detail.Location,
                     WeatherType = detail.WeatherType,
                     Temperature = detail.Temperature

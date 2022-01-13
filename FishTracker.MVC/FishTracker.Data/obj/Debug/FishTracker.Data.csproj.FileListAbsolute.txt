@@ -31,3 +31,20 @@ C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTr
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.CopyComplete
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.dll
 C:\Users\desig\Desktop\ElevenFiftyProjects\113SD\Red Badge\FishTrackerMVC\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.pdb
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\FishTracker.Data.dll.config
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\FishTracker.Data.dll
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\FishTracker.Data.pdb
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\EntityFramework.dll
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\EntityFramework.xml
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.CoreCompileInputs.cache
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.dll
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.pdb
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.AssemblyReference.cache
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.Migrations.InitialMigration.resources
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.GenerateResource.cache

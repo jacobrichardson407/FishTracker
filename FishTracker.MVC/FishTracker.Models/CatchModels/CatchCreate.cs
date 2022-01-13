@@ -16,7 +16,9 @@ namespace FishTracker.Models.Catch
         public double Length { get; set; }
         public double Weight { get; set; }
         public DateTime CatchDate { get; set; }
-        public LureType TypeOfLure { get; set; }
+        public virtual List<LureType> TypeOfLure { get; set; }
+        public virtual List<FishTracker.Data.Lure> LureBrand { get; set; }
+        public virtual List<FishTracker.Data.Lure> LureName { get; set; }
         public string Location { get; set; }
         [Display(Name = "Weather Type")]
         public Weather WeatherType { get; set; }

@@ -241,11 +241,19 @@
     <Content Include="Views\Catch\Create.cshtml" />
     <Content Include="Views\Catch\Details.cshtml" />
     <Content Include="Views\Catch\Edit.cshtml" />
+    <Content Include="Views\Lure\Index.cshtml" />
+    <Content Include="Views\Lure\Create.cshtml" />
+    <Content Include="Views\Lure\Delete.cshtml" />
+    <Content Include="Views\Lure\Edit.cshtml" />
+    <Content Include="Views\Lure\Details.cshtml" />
+    <Content Include="Views\FishSpecies\Index.cshtml" />
+    <Content Include="Views\FishSpecies\Create.cshtml" />
+    <Content Include="Views\FishSpecies\Delete.cshtml" />
+    <Content Include="Views\FishSpecies\Edit.cshtml" />
+    <Content Include="Views\FishSpecies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\FishSpecies\" />
-    <Folder Include="Views\Lure\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

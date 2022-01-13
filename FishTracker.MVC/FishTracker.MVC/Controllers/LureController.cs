@@ -13,6 +13,7 @@ using System.Web.Mvc;
 
 namespace FishTracker.MVC.Controllers
 {
+    [Authorize]
     public class LureController : Controller
     {
         private ApplicationDbContext _db = new ApplicationDbContext();

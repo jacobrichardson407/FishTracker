@@ -1,5 +1,8 @@
 ﻿using FishTracker.Data;
+using FishTracker.Models.Species;
 using FishTracker.MVC.Data;
+using FishTracker.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,102 +13,126 @@ using System.Web.Mvc;
 
 namespace FishTracker.MVC.Controllers
 {
+    [Authorize]
     public class FishSpeciesController : Controller
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
-        // GET: Product
+        // GET: Catch
         public ActionResult Index()
         {
-            List<FishSpecies> orderedList = _db.Species.OrderBy(spec => spec.Name).ToList();
-            return View(orderedList);
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SpeciesService(userId);
+            var model = service.GetSpecies();
+
+            return View(model);
         }
-        // GET: Product
+        // GET: Catch
         public ActionResult Create()
         {
             return View();
         }
-        // POST: Product
+        // POST: Catch
         [HttpPost]
-        public ActionResult Create(FishSpecies species)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(SpeciesCreate species)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.Species.Add(species);
-                _db.SaveChanges();
+                return View(species);
+            }
+
+            var service = CreateSpeciesService();
+
+            if (service.CreateSpecies(species))
+            {
+                TempData["SaveResult"] = "Your species was saved.";
                 return RedirectToAction("Index");
             }
+
+            ModelState.AddModelError("", "Your species could not be saved.");
+
             return View(species);
         }
-        // GET: Delete
-        // Product/Delete/{id}
-        public ActionResult Delete(int? id)
+
+        private SpeciesService CreateSpeciesService()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
-            }
-            FishSpecies species = _db.Species.Find(id);
-            if (species == null)
-            {
-                return HttpNotFound();
-            }
-            return View(species);
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SpeciesService(userId);
+            return service;
         }
-        // POST: Delete
-        // Product/Delete/{id}
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+
+        // GET: Delete
+        // Catch/Delete/{id}
         public ActionResult Delete(int id)
         {
-            FishSpecies species = _db.Species.Find(id);
-            _db.Species.Remove(species);
-            _db.SaveChanges();
+            var svc = CreateSpeciesService();
+            var model = svc.GetSpeciesById(id);
+
+            return View(model);
+        }
+        // POST: Delete
+        // Catch/Delete/{id}
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateSpeciesService();
+
+            service.DeleteSpecies(id);
+
+            TempData["SaveResult"] = "Your species was deleted.";
+
             return RedirectToAction("Index");
         }
         // GET: Edit
-        // Product/Edit/{id}
-        public ActionResult Edit(int? id)
+        // Catch/Edit/{id}
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
-            }
-            FishSpecies species = _db.Species.Find(id);
-            if (species == null)
-            {
-                return HttpNotFound();
-            }
-            return View(species);
+            var service = CreateSpeciesService();
+            var detail = service.GetSpeciesById(id);
+            var model =
+                new SpeciesEdit()
+                {
+                    SpeciesId = detail.SpeciesId,
+                    Name = detail.Name,
+                    AverageLength = detail.AverageLength,
+                    AverageWeight = detail.AverageWeight,
+                    Description = detail.Description,
+                    PreferredLures = detail.PreferredLures
+                };
+            return View(model);
         }
-        // POST: Edit
-        // Product/Edit/{id}
-        [HttpPost, ActionName("Edit")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(FishSpecies species)
+        public ActionResult Edit(int id, SpeciesEdit model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.Entry(species).State = EntityState.Modified;
-                _db.SaveChanges();
+                return View(model);
+            }
+            if (model.SpeciesId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+            var service = CreateSpeciesService();
+
+            if (service.UpdateSpecies(model))
+            {
+                TempData["SaveResult"] = "Your species has been updated.";
                 return RedirectToAction("Index");
             }
-            return View(species);
+            ModelState.AddModelError("", "Your species could not be updated.");
+            return View(model);
         }
         // GET: Details
-        // Product/Details/{id}
-        public ActionResult Details(int? id)
+        // Catch/Details/{id}
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            FishSpecies species = _db.Species.Find(id);
+            var svc = CreateSpeciesService();
+            var model = svc.GetSpeciesById(id);
 
-            if (species == null)
-            {
-                return HttpNotFound();
-            }
-            return View(species);
+            return View(model);
         }
     }
 }
