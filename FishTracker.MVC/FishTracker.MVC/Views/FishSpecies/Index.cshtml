@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.SpeciesName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.AverageLength)
         </th>
         <th>
@@ -27,25 +30,28 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AverageLength)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AverageWeight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PreferredLures)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SpeciesId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SpeciesId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SpeciesId })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.SpeciesName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AverageLength)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AverageWeight)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PreferredLures)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.SpeciesId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.SpeciesId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.SpeciesId })
+    </td>
+</tr>
 }
 
 </table>

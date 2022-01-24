@@ -94,15 +94,13 @@ namespace FishTracker.MVC.Controllers
                 new CatchEdit()
                 {
                     CatchId = detail.CatchId,
-                    FishSpecies = detail.FishSpecies,
+                    SpeciesName = detail.SpeciesName,
+                    LureInfo = detail.LureInfo,
                     Length = detail.Length,
                     Weight = detail.Weight,
                     CatchDate = detail.CatchDate,
-                    TypeOfLure = detail.TypeOfLure,
-                    LureBrand = detail.LureBrand,
-                    LureName = detail.LureName,
-                    Location = detail.Location,
                     WeatherType = detail.WeatherType,
+                    Location = detail.Location,
                     Temperature = detail.Temperature
                 };
             return View(model);

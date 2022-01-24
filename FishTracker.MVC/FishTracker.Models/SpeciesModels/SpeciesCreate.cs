@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,10 +10,19 @@ namespace FishTracker.Models.Species
 {
     public class SpeciesCreate
     {
-        public SpeciesName Name { get; set; }
+        [Required]
+        [Display(Name = "Species")]
+        public string SpeciesName { get; set; }
+        [Required]
+        [Display(Name = "Average Length")]
         public double AverageLength { get; set; }
+        [Required]
+        [Display(Name = "Average Weight")]
         public double AverageWeight { get; set; }
+        [Required]
         public string Description { get; set; }
+        [Required]
+        [Display(Name = "Preferred Lures")]
         public string PreferredLures { get; set; }
     }
 }

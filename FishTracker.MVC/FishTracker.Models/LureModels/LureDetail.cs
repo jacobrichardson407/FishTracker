@@ -15,6 +15,7 @@ namespace FishTracker.Models.Lure
         public string Brand { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
+        [Display(Name = "Lure Type")]
         public LureType TypeOfLure { get; set; }
     }
 }

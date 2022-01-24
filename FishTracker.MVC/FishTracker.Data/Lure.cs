@@ -11,9 +11,10 @@ namespace FishTracker.Data
     {
         public enum LureType
         {
-            Sinking =1,
+            Sinking = 1,
             Live,
             Floating,
+            [Display(Name = "Soft Plastic")]
             SoftPlastic,
             Crankbait,
             Spoon,
@@ -21,9 +22,16 @@ namespace FishTracker.Data
         }
         [Key]
         public int LureId { get; set; }
+        [Required]
+        [Display(Name = "Brand")]
         public string LureBrand { get; set; }
+        [Required]
+        [Display(Name = "Lure Name")]
         public string LureName { get; set; }
+        [Required]
         public string Color { get; set; }
+        [Required]
+        [Display(Name = "Lure Type")]
         public LureType TypeOfLure { get; set; }
         public Guid AnglerId { get; set; }
 

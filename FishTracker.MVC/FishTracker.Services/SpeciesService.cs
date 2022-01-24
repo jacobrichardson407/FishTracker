@@ -22,7 +22,7 @@ namespace FishTracker.Services
                 new FishSpecies()
                 {
                     AnglerId = _userId,
-                    Name = model.Name,
+                    SpeciesName = model.SpeciesName,
                     AverageLength = model.AverageLength,
                     AverageWeight = model.AverageWeight,
                     Description = model.Description,
@@ -47,7 +47,7 @@ namespace FishTracker.Services
                         new SpeciesListItem()
                         {
                             SpeciesId = e.SpeciesId,
-                            Name = e.Name,
+                            SpeciesName = e.SpeciesName,
                             AverageLength = e.AverageLength,
                             AverageWeight = e.AverageWeight,
                             Description = e.Description,
@@ -69,7 +69,7 @@ namespace FishTracker.Services
                     new SpeciesDetail()
                     {
                         SpeciesId = entity.SpeciesId,
-                        Name = entity.Name,
+                        SpeciesName = entity.SpeciesName,
                         AverageLength = entity.AverageLength,
                         AverageWeight = entity.AverageWeight,
                         Description = entity.Description,
@@ -86,7 +86,7 @@ namespace FishTracker.Services
                     .Species
                     .Single(e => e.SpeciesId == model.SpeciesId && e.AnglerId == _userId);
 
-                entity.Name = model.Name;
+                entity.SpeciesName = model.SpeciesName;
                 entity.AverageLength = model.AverageLength;
                 entity.AverageWeight = model.AverageWeight;
                 entity.Description = model.Description;

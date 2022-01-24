@@ -36,6 +36,7 @@ namespace FishTracker.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(SpeciesCreate species)
         {
+            
             if (!ModelState.IsValid)
             {
                 return View(species);
@@ -94,7 +95,7 @@ namespace FishTracker.MVC.Controllers
                 new SpeciesEdit()
                 {
                     SpeciesId = detail.SpeciesId,
-                    Name = detail.Name,
+                    SpeciesName = detail.SpeciesName,
                     AverageLength = detail.AverageLength,
                     AverageWeight = detail.AverageWeight,
                     Description = detail.Description,

@@ -22,15 +22,13 @@ namespace FishTracker.Services
                 new Catch()
                 {
                     AnglerId = _userId,
-                    FishSpecies = model.FishSpecies,
+                    SpeciesName = model.SpeciesName,
+                    LureInfo = model.LureInfo,
                     Length = model.Length,
                     Weight = model.Weight,
                     CatchDate = model.CatchDate,
-                    TypeOfLure = model.TypeOfLure,
-                    LureBrand = model.LureBrand,
-                    LureName = model.LureName,
-                    Location = model.Location,
                     WeatherType = model.WeatherType,
+                    Location = model.Location,
                     Temperature = model.Temperature
                 };
             using (var ctx = new ApplicationDbContext())
@@ -52,19 +50,17 @@ namespace FishTracker.Services
                         new CatchListItem()
                         {
                             CatchId = e.CatchId,
-                            Name = e.FishSpecies,
-                            TypeOfLure = e.TypeOfLure,
-                            LureBrand = e.LureBrand,
-                            LureName = e.LureName,
+                            SpeciesName = e.SpeciesName,
+                            LureInfo = e.LureInfo.ToList(),
                             Length = e.Length,
                             Weight = e.Weight,
                             CatchDate = e.CatchDate,
-                            Location = e.Location,
                             WeatherType = e.WeatherType,
+                            Location = e.Location,
                             Temperature = e.Temperature
                         }
                         );
-                return query.ToArray();
+                return query.ToList();
             }
         }
         public CatchDetail GetCatchById(int id)
@@ -79,13 +75,11 @@ namespace FishTracker.Services
                     new CatchDetail()
                     {
                         CatchId = entity.CatchId,
-                        FishSpecies = entity.FishSpecies,
+                        SpeciesName = entity.SpeciesName,
+                        LureInfo = entity.LureInfo,
                         Length = entity.Length,
                         Weight = entity.Weight,
                         CatchDate = entity.CatchDate,
-                        TypeOfLure = entity.TypeOfLure,
-                        LureBrand = entity.LureBrand,
-                        LureName = entity.LureName,
                         Location = entity.Location,
                         WeatherType = entity.WeatherType,
                         Temperature = entity.Temperature
@@ -101,13 +95,11 @@ namespace FishTracker.Services
                     .Catches
                     .Single(e => e.CatchId == model.CatchId && e.AnglerId == _userId);
 
-                entity.FishSpecies = model.FishSpecies;
+                entity.SpeciesName = model.SpeciesName;
+                entity.LureInfo = model.LureInfo;
                 entity.Length = model.Length;
                 entity.Weight = model.Weight;
                 entity.CatchDate = model.CatchDate;
-                entity.TypeOfLure = model.TypeOfLure;
-                entity.LureBrand = model.LureBrand;
-                entity.LureName = model.LureName;
                 entity.Location = model.Location;
                 entity.WeatherType = model.WeatherType;
                 entity.Temperature = model.Temperature;

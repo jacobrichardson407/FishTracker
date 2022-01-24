@@ -12,13 +12,12 @@ namespace FishTracker.Models.Catch
     public class CatchEdit
     {
         public int CatchId { get; set; }
-        public FishSpecies FishSpecies { get; set; }
+        public virtual List<FishSpecies> SpeciesName { get; set; }
+
         public double Length { get; set; }
         public double Weight { get; set; }
         public DateTime CatchDate { get; set; }
-        public virtual List<LureType> TypeOfLure { get; set; }
-        public virtual List<FishTracker.Data.Lure> LureBrand { get; set; }
-        public virtual List<FishTracker.Data.Lure> LureName { get; set; }
+        public virtual List<FishTracker.Data.Lure> LureInfo { get; set; }
         public string Location { get; set; }
         public Weather WeatherType { get; set; }
         public double Temperature { get; set; }

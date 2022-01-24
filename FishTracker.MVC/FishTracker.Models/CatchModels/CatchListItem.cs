@@ -14,12 +14,12 @@ namespace FishTracker.Models.Catch
     {
         [Key]
         public int CatchId { get; set; }
-        public virtual FishSpecies Name { get; set; }
-        public virtual List<LureType> TypeOfLure { get; set; }
-        public virtual List<FishTracker.Data.Lure> LureBrand { get; set; }
-        public virtual List<FishTracker.Data.Lure> LureName { get; set; }
+        [Display(Name = "Species")]
+        public virtual List<FishSpecies> SpeciesName { get; set; }
+        public virtual List<FishTracker.Data.Lure> LureInfo { get; set; }
         public double Length { get; set; }
         public double Weight { get; set; }
+        [Display(Name = "Date")]
         public DateTime CatchDate { get; set; }
         public string Location { get; set; }
         [Display(Name = "Weather Type")]

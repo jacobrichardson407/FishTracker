@@ -9,30 +9,21 @@ namespace FishTracker.Data
 {
     public class FishSpecies
     {
-        public enum SpeciesName
-        { 
-            LargemouthBass = 1, 
-            SmallmouthBass, 
-            Pike,
-            Bluegill, 
-            Sunfish,
-            Catfish,
-            Bowfin,
-            Crappie,
-            Walleye,
-            Carp,
-        }
         [Key]
         public int SpeciesId { get; set; }
         [Required]
-        public SpeciesName Name { get; set; }
+        [Display(Name = "Species Name")]
+        public string SpeciesName { get; set; }
         [Required]
+        [Display(Name = "Average Length")]
         public double AverageLength { get; set; }
         [Required]
+        [Display(Name = "Average Weight")]
         public double AverageWeight { get; set; }
         [Required]
         public string Description { get; set; }
         [Required]
+        [Display(Name = "Preferred Lures")]
         public string PreferredLures { get; set; }
         public Guid AnglerId { get; set; }
 
