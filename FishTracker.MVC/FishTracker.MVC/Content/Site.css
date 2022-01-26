@@ -7,7 +7,7 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    margin-top: 20px;
+    margin-top: 10em;
     padding-left: 15px;
     padding-right: 15px;
     background-color: rgb(255 255 255 / 0.65);
@@ -30,4 +30,10 @@ textarea {
 
 #navbarSupportedContent{
     color: white;
+}
+nav{
+    font-weight: bolder;
+    text-shadow: 0 0 7px lightblue;
+    background-color: rgb(0 0 0 / 0.45);
+    box-shadow: 0 0 10px lightblue;
 }
