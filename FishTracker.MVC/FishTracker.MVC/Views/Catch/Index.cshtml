@@ -1,27 +1,21 @@
 ﻿@model IEnumerable<FishTracker.Models.Catch.CatchListItem>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Catches";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Catch", "Create")
 </p>
-@if (TempData.ContainsKey("SaveResult"))
-{
-    <div class="alert alert-success fade in" role="alert">
-        @ViewBag.SaveResult
-        <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-        </button>
-    </div>
-}
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.SpeciesName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LureType)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Length)
@@ -44,11 +38,14 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
+@foreach (var item in Model) {
+    var date = item.CatchDate.ToShortDateString();
 <tr>
     <td>
         @Html.DisplayFor(modelItem => item.SpeciesName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LureType)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Length)
@@ -57,7 +54,7 @@
         @Html.DisplayFor(modelItem => item.Weight)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.CatchDate)
+        @Html.DisplayFor(modelItem => date)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Location)
@@ -74,6 +71,6 @@
         @Html.ActionLink("Delete", "Delete", new { id = item.CatchId })
     </td>
 </tr>
-    }
+}
 
 </table>

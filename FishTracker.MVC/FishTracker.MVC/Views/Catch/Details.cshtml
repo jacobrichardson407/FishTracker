@@ -1,7 +1,7 @@
 ﻿@model FishTracker.Models.Catch.CatchDetail
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Catch Details";
 }
 
 <h2>Details</h2>
@@ -10,22 +10,6 @@
     <h4>CatchDetail</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CatchId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CatchId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SpeciesName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SpeciesName)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Length)
         </dt>
@@ -51,11 +35,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.WeatherType)
+            @Html.DisplayNameFor(model => model.LureType)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.WeatherType)
+            @Html.DisplayFor(model => model.LureType)
         </dd>
 
         <dt>
@@ -64,6 +48,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeatherType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeatherType)
         </dd>
 
         <dt>
@@ -77,6 +69,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new {  id = Model.CatchId  }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CatchId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

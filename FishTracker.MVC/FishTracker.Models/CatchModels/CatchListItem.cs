@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using static FishTracker.Data.Catch;
 using static FishTracker.Data.Lure;
 
@@ -15,8 +17,11 @@ namespace FishTracker.Models.Catch
         [Key]
         public int CatchId { get; set; }
         [Display(Name = "Species")]
-        public virtual List<FishSpecies> SpeciesName { get; set; }
-        public virtual List<FishTracker.Data.Lure> LureInfo { get; set; }
+        public string SpeciesName { get; set; }
+        [NotMapped]
+        public List<SelectListItem> SpeciesList { get; set; }
+        [Display(Name ="Type of Lure")]
+        public LureType LureType { get; set; }
         public double Length { get; set; }
         public double Weight { get; set; }
         [Display(Name = "Date")]

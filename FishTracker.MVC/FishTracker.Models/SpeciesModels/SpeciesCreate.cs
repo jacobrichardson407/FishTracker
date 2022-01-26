@@ -10,6 +10,8 @@ namespace FishTracker.Models.Species
 {
     public class SpeciesCreate
     {
+        [Key]
+        public int SpeciesId { get; set; }
         [Required]
         [Display(Name = "Species")]
         public string SpeciesName { get; set; }

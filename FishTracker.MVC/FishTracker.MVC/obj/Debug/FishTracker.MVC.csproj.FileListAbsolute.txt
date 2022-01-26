@@ -212,4 +212,3 @@ C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracke
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.csproj.CoreCompileInputs.cache
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.dll
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.pdb
-C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.csproj.CopyComplete

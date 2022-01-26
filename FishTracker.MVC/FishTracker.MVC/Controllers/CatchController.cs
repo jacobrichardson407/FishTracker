@@ -29,6 +29,7 @@ namespace FishTracker.MVC.Controllers
         // GET: Catch
         public ActionResult Create()
         {
+            ViewBag.CurrentSpecies = new SelectList(_db.Species, "SpeciesName", "SpeciesName");
             return View();
         }
         // POST: Catch
@@ -94,11 +95,11 @@ namespace FishTracker.MVC.Controllers
                 new CatchEdit()
                 {
                     CatchId = detail.CatchId,
-                    SpeciesName = detail.SpeciesName,
-                    LureInfo = detail.LureInfo,
+                    SpeciesName = detail.SpeciesList,
+                    LureType = detail.LureType,
                     Length = detail.Length,
                     Weight = detail.Weight,
-                    CatchDate = detail.CatchDate,
+                    CatchDate = detail.CatchDate.Date,
                     WeatherType = detail.WeatherType,
                     Location = detail.Location,
                     Temperature = detail.Temperature

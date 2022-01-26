@@ -15,7 +15,7 @@ namespace FishTracker.MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Track information about your fish catches, upload and save lures, and upload and save species of fish all with one MVC!";
 
             return View();
         }

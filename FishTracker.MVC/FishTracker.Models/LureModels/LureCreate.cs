@@ -10,6 +10,8 @@ namespace FishTracker.Models.Lure
 {
     public class LureCreate
     {
+        [Key]
+        public int LureId { get; set; }
         [Required]
         public string Brand { get; set; }
         [Required]

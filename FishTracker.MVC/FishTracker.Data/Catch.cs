@@ -16,9 +16,9 @@ namespace FishTracker.Data
         [Display(Name = "Catch Id")]
         public int CatchId { get; set; }
         public int SpeciesId { get; set; }
+        public List<FishSpecies> SpeciesList { get; set; }
         [Display(Name = "Species Name")]
-        public virtual List<FishSpecies> SpeciesName { get; set; }
-        public FishSpecies FishSpecies { get; set; }
+        public string SpeciesName { get; set; }
         [Required]
         public double Length { get; set; }
         [Required]
@@ -27,10 +27,8 @@ namespace FishTracker.Data
         [Display(Name = "Date")]
         public DateTime CatchDate { get; set; }
         public int LureId { get; set; }
-        [Display(Name = "Lure Information")]
-        public virtual List<Lure> LureInfo { get; set; }
-        [ForeignKey("LureId")]
-        public Lure Lure { get; set; }
+        [Display(Name = "Types of Lures")]
+        public LureType LureTypes { get; set; }
         public string Location { get; set; }
         [Required]
         [Display(Name = "Weather Type")]
@@ -38,16 +36,17 @@ namespace FishTracker.Data
         [Required]
         public double Temperature { get; set; }
         public Guid AnglerId { get; set; }
-        public enum Weather 
-        { 
-            Sunny =1,
+        public enum Weather
+        {
+            Sunny = 1,
             [Display(Name = "Partly Cloudy")]
-            PartlyCloudy, 
-            Cloudy, 
-            Fog, 
-            Rain, 
-            Snow, 
-            Hail, 
-            Sleet }
+            PartlyCloudy,
+            Cloudy,
+            Fog,
+            Rain,
+            Snow,
+            Hail,
+            Sleet
+        }
     }
 }

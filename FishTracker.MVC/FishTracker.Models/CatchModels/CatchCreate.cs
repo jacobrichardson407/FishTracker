@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,23 +14,19 @@ namespace FishTracker.Models.Catch
 {
     public class CatchCreate
     {
-        public int SpeciesId { get; set; }
-        public virtual List<FishSpecies> SpeciesName { get; set; }
-        public IEnumerable<SelectListItem> CaughtSpecies
-        {
-            get
-            {
-                var items = new List<FishSpecies>();
-                return (IEnumerable<SelectListItem>)items;
-            }
-        }
+        [Key]
+        public int CatchId { get; set; }
+        [NotMapped]
+        public List<SelectListItem> SpeciesList { get; set; }
+        public string SpeciesName { get; set; }
         public double Length { get; set; }
         [Required]
         public double Weight { get; set; }
         [Required]
         public DateTime CatchDate { get; set; }
         [Required]
-        public virtual List<FishTracker.Data.Lure> LureInfo { get; set; }
+        [Display(Name = "Type of Lure")]
+        public LureType LureType { get; set; }
         public string Location { get; set; }
         [Required]
         [Display(Name = "Weather Type")]

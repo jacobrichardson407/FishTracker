@@ -47,7 +47,7 @@ namespace FishTracker.Services
                         new SpeciesListItem()
                         {
                             SpeciesId = e.SpeciesId,
-                            SpeciesName = e.SpeciesName,
+                            SpeciesName = e.SpeciesName.ToString(),
                             AverageLength = e.AverageLength,
                             AverageWeight = e.AverageWeight,
                             Description = e.Description,

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace FishTracker.Services
 {
@@ -22,11 +23,11 @@ namespace FishTracker.Services
                 new Catch()
                 {
                     AnglerId = _userId,
-                    SpeciesName = model.SpeciesName,
-                    LureInfo = model.LureInfo,
+                    SpeciesName = model.SpeciesName.ToString(),
+                    LureTypes = model.LureType,
                     Length = model.Length,
                     Weight = model.Weight,
-                    CatchDate = model.CatchDate,
+                    CatchDate = model.CatchDate.Date,
                     WeatherType = model.WeatherType,
                     Location = model.Location,
                     Temperature = model.Temperature
@@ -45,13 +46,14 @@ namespace FishTracker.Services
                     ctx
                     .Catches
                     .Where(e => e.AnglerId == _userId)
+                    .OrderByDescending(date => date.CatchDate).Take(10).ToList()
                     .Select(
                         e =>
                         new CatchListItem()
                         {
                             CatchId = e.CatchId,
                             SpeciesName = e.SpeciesName,
-                            LureInfo = e.LureInfo.ToList(),
+                            LureType = e.LureTypes,
                             Length = e.Length,
                             Weight = e.Weight,
                             CatchDate = e.CatchDate,
@@ -75,11 +77,11 @@ namespace FishTracker.Services
                     new CatchDetail()
                     {
                         CatchId = entity.CatchId,
-                        SpeciesName = entity.SpeciesName,
-                        LureInfo = entity.LureInfo,
+                        SpeciesName = new FishTracker.Models.Species.SpeciesListItem().SpeciesName,
+                        LureType = entity.LureTypes,
                         Length = entity.Length,
                         Weight = entity.Weight,
-                        CatchDate = entity.CatchDate,
+                        CatchDate = entity.CatchDate.Date,
                         Location = entity.Location,
                         WeatherType = entity.WeatherType,
                         Temperature = entity.Temperature
@@ -95,11 +97,11 @@ namespace FishTracker.Services
                     .Catches
                     .Single(e => e.CatchId == model.CatchId && e.AnglerId == _userId);
 
-                entity.SpeciesName = model.SpeciesName;
-                entity.LureInfo = model.LureInfo;
+                entity.SpeciesName = model.SpeciesName.ToString();
+                entity.LureTypes = model.LureType;
                 entity.Length = model.Length;
                 entity.Weight = model.Weight;
-                entity.CatchDate = model.CatchDate;
+                entity.CatchDate = model.CatchDate.Date;
                 entity.Location = model.Location;
                 entity.WeatherType = model.WeatherType;
                 entity.Temperature = model.Temperature;
