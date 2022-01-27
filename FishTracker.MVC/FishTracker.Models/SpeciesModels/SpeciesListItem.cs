@@ -12,10 +12,14 @@ namespace FishTracker.Models.Species
     {
         [Key]
         public int SpeciesId { get; set; }
+        [Display(Name ="Species")]
         public string SpeciesName { get; set; }
+        [Display(Name ="Average Length")]
         public double AverageLength { get; set; }
+        [Display(Name ="Average Weight")]
         public double AverageWeight { get; set; }
         public string Description { get; set; }
+        [Display(Name ="Preferred Lures")]
         public string PreferredLures { get; set; }
     }
 }

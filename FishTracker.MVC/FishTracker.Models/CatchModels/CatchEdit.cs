@@ -17,6 +17,7 @@ namespace FishTracker.Models.Catch
         [Key]
         public int CatchId { get; set; }
         [NotMapped]
+        [Display(Name ="Species")]
         public List<SelectListItem> SpeciesName { get; set; }
         public double Length { get; set; }
         public double Weight { get; set; }

@@ -18,11 +18,13 @@ namespace FishTracker.Models.Catch
         public int CatchId { get; set; }
         [NotMapped]
         public List<SelectListItem> SpeciesList { get; set; }
+        [Display(Name ="Species")]
         public string SpeciesName { get; set; }
         public double Length { get; set; }
         [Required]
         public double Weight { get; set; }
         [Required]
+        [Display(Name ="Date")]
         public DateTime CatchDate { get; set; }
         [Required]
         [Display(Name = "Type of Lure")]
