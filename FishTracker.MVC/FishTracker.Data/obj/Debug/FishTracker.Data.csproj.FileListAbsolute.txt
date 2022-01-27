@@ -58,5 +58,6 @@ C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracke
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.Migrations.FinalMigration.resources
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.GenerateResource.cache
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.CoreCompileInputs.cache
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.CopyComplete
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.dll
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.pdb

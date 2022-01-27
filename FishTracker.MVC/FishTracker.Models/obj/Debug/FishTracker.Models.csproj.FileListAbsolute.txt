@@ -44,5 +44,6 @@ C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracke
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Models\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Models\obj\Debug\FishTracker.Models.csproj.AssemblyReference.cache
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Models\obj\Debug\FishTracker.Models.csproj.CoreCompileInputs.cache
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Models\obj\Debug\FishTracker.Models.csproj.CopyComplete
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Models\obj\Debug\FishTracker.Models.dll
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Models\obj\Debug\FishTracker.Models.pdb

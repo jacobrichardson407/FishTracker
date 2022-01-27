@@ -1,0 +1,63 @@
+﻿@model FishTracker.Models.Species.SpeciesDetail
+
+@{
+    ViewBag.Title = "Delete Species";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeciesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpeciesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AverageLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AverageLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AverageWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AverageWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferredLures)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferredLures)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-outline-dark" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

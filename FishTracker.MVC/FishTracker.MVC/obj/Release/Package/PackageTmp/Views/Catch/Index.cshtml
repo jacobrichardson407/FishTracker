@@ -1,0 +1,76 @@
+﻿@model IEnumerable<FishTracker.Models.Catch.CatchListItem>
+
+@{
+    ViewBag.Title = "Catches";
+}
+
+<h2>Index</h2>
+
+<p class="btn btn-outline-dark">
+    @Html.ActionLink("Create New Catch", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeciesName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LureType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Length)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CatchDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeatherType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    var date = item.CatchDate.ToShortDateString();
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.SpeciesName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LureType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Length)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Weight)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => date)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Location)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.WeatherType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Temperature)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.CatchId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.CatchId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CatchId })
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,57 @@
+﻿@model FishTracker.Models.Species.SpeciesDetail
+
+@{
+    ViewBag.Title = "Species Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeciesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpeciesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AverageLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AverageLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AverageWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AverageWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferredLures)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferredLures)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SpeciesId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
