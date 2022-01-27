@@ -55,8 +55,7 @@ C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracke
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\System.Web.WebPages.xml
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.Migrations.FinalMigration.resources
-C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.GenerateResource.cache
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.AssemblyReference.cache
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.CoreCompileInputs.cache
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.csproj.CopyComplete
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.Data\obj\Debug\FishTracker.Data.dll

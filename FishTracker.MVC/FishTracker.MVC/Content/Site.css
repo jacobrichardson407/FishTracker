@@ -1,9 +1,16 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url("Images/bassbackground.jpg");
-    background-size: auto;
+    background: url("Images/bassbackground.jpg") no-repeat center center fixed;
+    background-size: auto auto;
+    background-size: 100% auto;
     font-family: 'Open Sans', sans-serif;
+}
+@media screen and (max-width:800px) {
+    body {
+        background-size: cover;
+        background-attachment: fixed
+    }
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -11,7 +18,10 @@
     margin-top: 10em;
     padding-left: 15px;
     padding-right: 15px;
+}
+#body-content {
     background-color: rgb(255 255 255 / 0.65);
+    background-size: 100% auto;
     box-shadow: inset black 0 0 10px;
 }
 .body-content h1{
@@ -69,7 +79,4 @@ h2#delete {
 h2#create {
     color: #00c01f;
     text-shadow: black 0 0 5px;
-
-
-
 }

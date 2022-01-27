@@ -210,5 +210,6 @@ C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracke
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.csproj.AssemblyReference.cache
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.csproj.CoreCompileInputs.cache
+C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.csproj.CopyComplete
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.dll
 C:\Users\desig\OneDrive\Desktop\ElevenFiftyProjects\113SD\FishTracker\FishTracker.MVC\FishTracker.MVC\obj\Debug\FishTracker.MVC.pdb

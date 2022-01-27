@@ -2,8 +2,19 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
-      "restoreTime": "2022-01-11T14:11:25.2688386Z"
+      "restoreTime": "2022-01-27T09:08:15.2668144Z"
     }
   },
-  "parameters": {}
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "573129e7-7bbf-4a47-a918-8d86869f175f"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "FishTracker_rg"
+    }
+  }
 }

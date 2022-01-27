@@ -2,10 +2,25 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
-      "restoreTime": "2022-01-27T06:54:32.4209895Z"
+      "restoreTime": "2022-01-27T09:08:54.853424Z"
     }
   },
   "parameters": {
+    "FishTrackerWebMVC.resourceGroupName": {
+      "Name": "FishTrackerWebMVC.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "FishTrackerWebMVC_RG"
+    },
+    "FishTrackerWebMVC.subscriptionId": {
+      "Name": "FishTrackerWebMVC.subscriptionId",
+      "Type": "subscription",
+      "Value": "573129e7-7bbf-4a47-a918-8d86869f175f"
+    },
+    "FishTrackerWebMVC.resourceGroupLocation": {
+      "Name": "FishTrackerWebMVC.resourceGroupLocation",
+      "Type": null,
+      "Value": "eastus"
+    },
     "mssql1.subscriptionId": {
       "Name": "mssql1.subscriptionId",
       "Type": "subscription",
@@ -14,7 +29,17 @@
     "mssql1.resourceGroupName": {
       "Name": "mssql1.resourceGroupName",
       "Type": "resourceGroup",
-      "Value": "FishTrackerWebMVC_RG"
+      "Value": "FishTracker_rg"
+    },
+    "FishTrackerWebMVC.resourceName": {
+      "Name": "FishTrackerWebMVC.resourceName",
+      "Type": null,
+      "Value": "FishTrackerWebMVC"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "573129e7-7bbf-4a47-a918-8d86869f175f"
     }
   }
 }
